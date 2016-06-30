@@ -1,6 +1,9 @@
 easy-react-redux
 ================
 
+[![Build Status](https://travis-ci.org/dai-shi/easy-react-redux.svg?branch=master)](https://travis-ci.org/dai-shi/easy-react-redux)
+[![npm version](https://badge.fury.io/js/easy-react-redux.svg)](https://badge.fury.io/js/easy-react-redux)
+
 Yet another react redux integration only with stateless function components.
 
 Background
