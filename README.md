@@ -23,7 +23,7 @@ npm install easy-react-redux --save
 Usage
 -----
 
-Baseline usage:
+### Baseline usage
 
 ```javascript
 import { subscribe } from 'easy-react-redux';
@@ -44,7 +44,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('app'));
 
 When the application state is changed, it will only re-render `Hello` component.
 
-Limiting subscription:
+### Limiting subscription
 
 ```javascript
 import { subscribeWithKey } from 'easy-react-redux';
@@ -58,17 +58,19 @@ const Hello = subscribeWithKey('message')(({ name, store }) => (
 
 This will only re-render the component if `message` in the state changes.
 
+### More
+
 There're some other methods: `subscribeWithPath`, `subscribeWithoutKey`, and `subscribeWithCustomKey` which is not simple anymore.
 
 The good thing is that there's no hack and the source code is simple, and hence predictable. Please take a look at the code to get more insight.
 
-If you think passing `store` in the props all the way down is annoying, you can use `Provider` from react-redux and passes `store` in the context. See the example directory for more information.
+If you think passing `store` in the props all the way down is annoying, you can use `Provider` from react-redux and passes `store` in the context. See the example folder for more information.
 
 Example
 -------
 
 The [example](example) folder contains a working example.
-You can run it with
+You can run it with:
 
 ```bash
 PORT=8080 npm run example
