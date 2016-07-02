@@ -29,6 +29,8 @@ Usage
 ### Baseline usage
 
 ```javascript
+import React from 'react';
+import { createStore } from 'redux';
 import { subscribe } from 'easy-react-redux';
 
 const Hello = subscribe()(({ name, store }) => (
@@ -40,6 +42,8 @@ const Hello = subscribe()(({ name, store }) => (
 
 const App = ({ store }) => (<Hello name="world" store={store} />);
 
+const reducer = ...;
+const initialState = ...;
 const store = createStore(reducer, initialState);
 
 ReactDOM.render(<App store={store} />, document.getElementById('app'));
@@ -61,7 +65,7 @@ const Hello = subscribeWithKey('message')(({ name, store }) => (
 
 This will only re-render the component if `message` in the state changes.
 
-### More
+### More methods
 
 There're some other methods: `subscribeWithPath`, `subscribeWithoutKey`, and `subscribeWithCustomKey` which is not simple anymore.
 
